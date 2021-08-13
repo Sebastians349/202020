@@ -2,7 +2,8 @@ import React from 'react';
 import { ChakraProvider, Box, VStack, Grid } from '@chakra-ui/react';
 import { extendTheme } from '@chakra-ui/react';
 import { ColorModeSwitcher } from './ColorModeSwitcher';
-import Reloj from './components/Reloj';
+import Reloj from './components/main/Reloj';
+import BotonReloj from './components/main/BotonReloj';
 
 function App() {
   const theme = extendTheme({
@@ -27,6 +28,7 @@ function App() {
           <ColorModeSwitcher justifySelf="flex-end" />
           <VStack spacing={8}>
             <Reloj />
+            <BotonReloj></BotonReloj>
           </VStack>
         </Grid>
       </Box>
