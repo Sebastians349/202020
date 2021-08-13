@@ -1,37 +1,32 @@
 import React from 'react';
-import {
-  ChakraProvider,
-  Box,
-  Text,
-  Link,
-  VStack,
-  Code,
-  Grid,
-  theme,
-} from '@chakra-ui/react';
+import { ChakraProvider, Box, VStack, Grid } from '@chakra-ui/react';
+import { extendTheme } from '@chakra-ui/react';
 import { ColorModeSwitcher } from './ColorModeSwitcher';
-import { Logo } from './Logo';
+import Reloj from './components/Reloj';
 
 function App() {
+  const theme = extendTheme({
+    colors: {
+      brand: {
+        100: '#E76F51',
+        200: '#F4A261',
+        300: '#E9C46A',
+        400: '#33C1B1',
+        500: '#2FB1A2',
+        600: '#2A9D8F',
+        700: '#264653',
+        800: '#335F70',
+        900: '#2D5362',
+      },
+    },
+  });
   return (
     <ChakraProvider theme={theme}>
       <Box textAlign="center" fontSize="xl">
         <Grid minH="100vh" p={3}>
           <ColorModeSwitcher justifySelf="flex-end" />
           <VStack spacing={8}>
-            <Logo h="40vmin" pointerEvents="none" />
-            <Text>
-              Edit <Code fontSize="xl">src/App.js</Code> and save to reload.
-            </Text>
-            <Link
-              color="teal.500"
-              href="https://chakra-ui.com"
-              fontSize="2xl"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn Chakra
-            </Link>
+            <Reloj />
           </VStack>
         </Grid>
       </Box>
