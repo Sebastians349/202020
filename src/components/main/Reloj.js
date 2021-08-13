@@ -1,7 +1,12 @@
 import React from 'react';
-import { Box, Circle, CircularProgress } from '@chakra-ui/react';
+import {
+  Box,
+  Circle,
+  CircularProgress,
+  CircularProgressLabel,
+} from '@chakra-ui/react';
 
-const Reloj = () => {
+const Reloj = (props) => {
   /*   function tiempo() {
     const inicio = new Date();
     const segundos = inicio.getSeconds();
@@ -20,7 +25,8 @@ const Reloj = () => {
         borderColor="brand.500"
         color="black.500"
       >
-        <CircularProgress value={35} size="xs" />
+        <CircularProgress value={40} size="xs" />
+        <CircularProgressLabel size="md">40%</CircularProgressLabel>
       </Circle>
     </Box>
   );
