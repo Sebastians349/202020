@@ -13,16 +13,14 @@ const Reloj = () => {
   return (
     <Box>
       <Circle
-        size="20rem"
+        size="15rem"
         bg="transparent"
         borderWidth=".5rem"
         borderColor="brand.500"
         color="black.500"
       >
-        <CircularProgress value={tiempo} size="xs" />
-        <CircularProgressLabel fontSize="2xl">
-          {setTiempo}%
-        </CircularProgressLabel>
+        <CircularProgress value={tiempo} size="15rem" />
+        <CircularProgressLabel fontSize="4xl">{tiempo}%</CircularProgressLabel>
       </Circle>
       <Button
         size="md"
@@ -31,7 +29,7 @@ const Reloj = () => {
         width="150px"
         border="2px"
         borderColor="brand.500"
-        onClick={() => setTiempo()}
+        onClick={() => setTiempo(tiempo + 1)}
       >
         START
       </Button>
