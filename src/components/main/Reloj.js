@@ -10,6 +10,7 @@ import {
 const Reloj = () => {
   const [tiempo, setTiempo] = useState(0);
 
+  let segundos = 40;
   return (
     <Box>
       <Circle
@@ -19,8 +20,10 @@ const Reloj = () => {
         borderColor="brand.500"
         color="black.500"
       >
-        <CircularProgress value={tiempo} size="15rem" />
-        <CircularProgressLabel fontSize="4xl">{tiempo}%</CircularProgressLabel>
+        <CircularProgress value={segundos} size="15rem" />
+        <CircularProgressLabel fontSize="4xl" top="48%">
+          {segundos}"
+        </CircularProgressLabel>
       </Circle>
       <Button
         size="md"
@@ -29,7 +32,7 @@ const Reloj = () => {
         width="150px"
         border="2px"
         borderColor="brand.500"
-        onClick={() => setTiempo(tiempo + 1)}
+        // onClick={() => setTiempo(segundos)}
       >
         START
       </Button>
